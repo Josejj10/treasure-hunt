@@ -1,6 +1,6 @@
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet'
 
-const APP_NAME = 'vite-react-tailwind-starter';
+const APP_NAME = 'vite-react-tailwind-starter'
 
 const Meta = () => {
   return (
@@ -18,7 +18,7 @@ const Meta = () => {
 
       <link rel="shortcut icon" href="/assets/favicon.svg" />
     </Helmet>
-  );
-};
+  )
+}
 
-export default Meta;
+export default Meta

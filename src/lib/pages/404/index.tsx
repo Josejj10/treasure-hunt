@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
-import { Button } from '@/lib/components/ui/button';
+import { Button } from '@/lib/components/ui/button'
 
 const Page404 = () => {
   return (
@@ -27,7 +27,7 @@ const Page404 = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Page404;
+export default Page404

@@ -1,14 +1,14 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from 'react'
 
-import { ThemeProvider } from '@/lib/components/theme-provider';
+import { ThemeProvider } from '@/lib/components/theme-provider'
 
-import Footer from './Footer';
-import Header from './Header';
-import Meta from './Meta';
+import Footer from './Footer'
+import Header from './Header'
+import Meta from './Meta'
 
 type LayoutProps = {
-  children: ReactNode;
-};
+  children: ReactNode
+}
 
 const Layout = ({ children }: LayoutProps) => {
   return (
@@ -20,7 +20,7 @@ const Layout = ({ children }: LayoutProps) => {
         <Footer />
       </div>
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

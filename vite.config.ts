@@ -1,13 +1,14 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import react from '@vitejs/plugin-react-swc';
-import million from 'million/compiler';
-import { visualizer } from 'rollup-plugin-visualizer';
-import type { PluginOption } from 'vite';
-import { defineConfig } from 'vite';
-import checker from 'vite-plugin-checker';
-import type { VitePWAOptions } from 'vite-plugin-pwa';
-import { VitePWA } from 'vite-plugin-pwa';
-import tsConfigPaths from 'vite-tsconfig-paths';
+import react from '@vitejs/plugin-react-swc'
+import million from 'million/compiler'
+import path from 'path'
+import { visualizer } from 'rollup-plugin-visualizer'
+import type { PluginOption } from 'vite'
+import { defineConfig } from 'vite'
+import checker from 'vite-plugin-checker'
+import type { VitePWAOptions } from 'vite-plugin-pwa'
+import { VitePWA } from 'vite-plugin-pwa'
+import tsConfigPaths from 'vite-tsconfig-paths'
 
 const pwaOptions: Partial<VitePWAOptions> = {
   registerType: 'autoUpdate',
@@ -29,7 +30,7 @@ const pwaOptions: Partial<VitePWAOptions> = {
       },
     ],
   },
-};
+}
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -47,4 +48,9 @@ export default defineConfig({
   server: {
     open: true,
   },
-});
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
+})
